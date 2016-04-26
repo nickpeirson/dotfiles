@@ -1,0 +1,1 @@
+ssh -t $1 tmux -CC a

@@ -26,3 +26,9 @@
 	dump = cat-file -p
 [merge]
 	defaultToUpstream = true
+[push]
+	default = matching
+[core]
+	excludesfile = ~/.gitignore
+[tag]
+	sort = version:refname

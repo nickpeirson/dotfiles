@@ -31,7 +31,6 @@ export HISTSIZE=5000
 shopt -s cmdhist
 
 #Aliases
-alias gff="git flow feature"
 alias ls="ls -G"
 
 #Includes
@@ -44,3 +43,15 @@ fi
 if [ -d ~/.bash_completion.d ]; then
 	. ~/.bash_completion.d/*
 fi
+
+export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+
+test -e ${HOME}/.iterm2_shell_integration.bash && source ${HOME}/.iterm2_shell_integration.bash
+
+if [ -d ~/bin ]; then
+	export PATH="~/bin:$PATH"
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+. ~/.profile
