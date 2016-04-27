@@ -39,6 +39,8 @@ if [ -f ~/.profile ]; then
 fi
 if [ -f /opt/local/etc/bash_completion ]; then
 	. /opt/local/etc/bash_completion
+	. /opt/local/share/bash-completion/completions/ssh
+	complete -F _ssh ts
 fi
 if [ -d ~/.bash_completion.d ]; then
 	. ~/.bash_completion.d/*
@@ -53,5 +55,3 @@ if [ -d ~/bin ]; then
 fi
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
-. ~/.profile
