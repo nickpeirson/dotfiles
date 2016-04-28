@@ -1,1 +1,5 @@
-ssh -t $1 tmux -CC a
+if ! ssh -t $1 tmux -CC a; then
+    echo "Installing tmux..."
+    ssh -t $1 'sudo apt-get install tmux && echo new-session > ~/.tmux.conf'
+    ssh -t $1 tmux -CC a
+fi

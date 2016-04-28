@@ -1,0 +1,3 @@
+[submodule "home/.vim/bundle/vim-bracketed-paste"]
+	path = home/.vim/bundle/vim-bracketed-paste
+	url = https://github.com/ConradIrwin/vim-bracketed-paste
